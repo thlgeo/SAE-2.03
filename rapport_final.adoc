@@ -1,0 +1,380 @@
+
+:encoding: utf-8
+:lang: fr
+:sectnums:
+:doctype: book
+:imagesdir: img
+:toc: macro
+:toc-title: Table des matières
+:title: RAPPORT FINAL
+:icons: font
+
+[.text-center]
+[discrete]
+== B U T    I N F O R M A T I Q U E    1
+[.text-center]
+[discrete]
+==== SAÉ 2.03 – Installation de services réseaux
+  +
+[.text-center]
+[discrete]
+= *RAPPORT FINAL*
+  +
+ +
+[.text-center]
+RÉALISÉ PAR + 
+ +
+ +
+mailto:quentin.hamitouche.etu@univ-lille.fr[HAMITOUCHE Quentin] +
+mailto:guillaume.dewisme.etu@univ-lille.fr[DEWISME Guillaume] +
+mailto:theo.lenglart.etu@univ-lille.fr[LENGLART Théo] +
+ +
+ +
+26 mars 2023
+ +
+ +
+
+---
+
+toc::[]
+
+
+== Questions de vocabulaire et de culture informatique
+
+
+=== [[R1.1]] Que signifie “64-bit” dans “Debian 64-bit” ?^[<<Q1.1.1,1>>]^^[<<Q1.1.2,2>>]^
+
+« 64-bit » dans « Debian 64-bit » signifie que le système d'exploitation (c'est-à-dire le noyau et les paquets inclus dans le système) a été compilé pour être compatible avec le jeu d'instructions 64-bit.
+
+Pour être plus exact, il s'agit en réalité du jeu d'instructions PC 64 bits, aussi connu sous le nom d'amd64. 
+Il existe plusieurs jeux d'instructions qui ont tous leurs spécificités et leurs utilisations propres, comme par exemple AArch64 (arm64), EABI ARM (armel), ou PC 32 bits (i386).
+
+Afin d'assurer la compatibilité avec les machines utilisant ces jeux d'instructions, les développeurs doivent compiler leurs systèmes en conséquence. Car les fichiers binaires résultants de la compilation d'un programme contiennent des instructions en langage machine, et c'est précisément celles-ci qui diffèrent d'un jeu d'instructions à l'autre.
+
+
+
+=== [[R1.2]] Quelle est la configuration réseau utilisée par défaut ?^[<<Q1.2,3>>]^
+
+La configuration réseau par défaut est en mode d'accès par NAT, ou Network Address Translation, soit littéralement traduction d'adresse réseau en français.
+
+Ce mode correspond au rôle traditionnel qu'on attribue à un routeur de foyer : le principe consiste à traduire les adresses IP privées des hôtes en une seule et même adresse publique, ce qui permet aux hôtes de communiquer entre elles tout en permettant aux appareils en dehors du réseau de communiquer avec celles-ci.
+
+Dans notre cas, VirtualBox virtualise une carte réseau Intel PRO/1000 MT Desktop et simule le branchement en Ethernet de notre machine virtuelle à notre machine physique.
+
+
+=== Quel est le nom du fichier XML contenant la configuration de votre machine ?
+
+Le nom du fichier XML contenant la configuration de notre machine virtuel est `sae203.vbox`.
+
+=== Sauriez-vous le modifier directement ce fichier pour mettre 2 coeurs à votre machine ?
+
+Pour modifier le nombre de coeurs de notre machine virtuelle, il faut modifier le fichier de configuration XML de notre machine virtuelle.
+
+Il suffit de modifier l'attribut `count` de la balise `CPU`:
+
+```
+sae203.vbox
+└── <VirtualBox>
+    └── <Machine>
+        └── <Hardware>
+            └── <CPU count="2">
+```
+
+=== Qu'est-ce qu'un fichier iso bootable ?
+[[R1.5.1]] Un fichier ISO est une archive contenant la copie conforme d'un disque optique, c'est-à-dire qu'il constitue l'image d'un disque sous le système de fichiers ISO 9960^[<<Q1.5.1,4>>]^^[<<Q1.5.2,5>>]^.
+
+Pour que Virtualbox démarre à partir d'un fichier ISO, on remarquera qu'il faut ouvrir notre fichier  en tant qu'image disque chargée à partir d'un lecteur de disque virtuel. À partir de ce moment, Virtualbox fait comme si l'ISO était un CD ou un DVD inséré dans un lecteur optique.
+
+[[R1.5.2]] Un disque est dit bootable ou amorçable si le premier secteur constitue un secteur d'amorçage valide, comme un MBR (Master Boot Record). Le cas échéant, la machine exécute le bootloader ou chargeur d'amorçage présent dans ce secteur, qui se charge du reste de la séquence de démarrage de la machine^[<<Q1.5.3,6>>]^.
+
+=== Qu'est-ce que MATE ? GNOME ?
+
+MATE et GNOME sont deux environnements de bureau pour le système d'exploitation GNU/Linux.
+
+[[R1.6.1]] Un environnement de bureau fournit un ensemble cohérent d'applications en terme d'apparence, de fonctionnalité et convivialité. Plus simplement dit, c'est l'interface utilisateur^[<<Q1.6.1,7>>]^.
+
+[[R1.6.2]] MATE est la continuation de GNOME 2 par une communauté non satisfaite par GNOME 3. Il inclut des applications utiles tels qu'un gestionnaire de fichiers, un éditeur de texte, ou un visualiseur d'images. Toutes ces applications sont des dérivées des anciennes applications de GNOME 2, par exemple Caja est une divergence du gestionnaire de fichiers Nautilus pour GNOME.^[<<Q1.6.2,8>>]^
+
+// bidouillage pour afficher les images côte-à-côte
+[cols=">a,<a", frame=none, grid=none]
+|===
+| .Capture d'écran de l'environnement de bureau GNOME 3
+image::gnome.png[Capture d'écran de l'environnement de bureau GNOME 3]
+| .Capture d'écran de l'environnement de bureau MATE
+image::mate.png[Capture d'écran de l'environnement de bureau MATE]
+|===
+
+
+=== Qu'est-ce qu'un serveur ssh ?
+[[R1.7.1]] Le protocole SSH (Secure Shell) est une méthode de connexion à distance sécurisée d'un ordinateur à un autre. Il fournit plusieurs options alternatives pour une authentification forte et protège la sécurité et l'intégrité des communications avec un chiffrement fort^[<<Q1.7.1,9>>]^.
+
+[[R1.7.2]] Le protocole SSH fonctionne sur le modèle client/serveur. Le client SSH lance toujours la configuration de la connexion sécurisée et le serveur SSH écoute les demandes de connexion entrantes (généralement sur le port TCP 22 du système hôte) et y répond^[<<Q1.7.2,10>>]^.
+
+[[R1.7.3]] Il existe plusieurs serveurs SSH. Le plus connu d'entre eux est SSHD pour _OpenSSH SSH daemon_^[<<Q1.7.3,11>>]^, un _daemon_ étant un programme qui s'exécute en arrière-plan^[<<Q1.7.4,12>>]^.
+
+[[R1.7.5]] Un autre exemple de serveur SSH est  _Dropbear_, qui a été conçu pour des environnements à faible mémoire et ressources processeur^[<<Q1.7.5,13>>]^.
+
+
+=== Qu'est-ce qu'un serveur web ?
+[[R1.8.1]] Un serveur web, ou un serveur HTTP, est un logiciel servant des ressources à travers principalement le protocole HTTP, qui permet le dialogue via le réseau avec le logiciel client, généralement un navigateur web.
+
+Le protocole HTTP a été développé pour le web, et les pages web sont en pratique toujours servies avec ce protocole. Cependant d'autres ressources du Web comme les fichiers à télécharger ou les flux audio ou vidéo sont parfois servis avec d'autres protocoles, telle que, par exemple, le protocole de transport Temps Réel (Real-time Transport Protocol)^[<<Q1.8.1,14>>]^.
+
+[[R1.8.2]] Deux exemples de serveurs web connus sont NGINX et Apache, toutefois, il est intéressant que tout premier serveur web, écrit par Tim Berners-Lee au sein d'une équipe du CERN en 1990 se nomme CERN httpd (puis W3C httpd)^[<<Q1.8.2,15>>]^. 
+
+[[R1.8.3]] Le logiciel a été laissé à l'abandon depuis la sortie de sa version finale en 1995, considéré comme stable par le W3C, qui a préféré le délaisser au profit du serveur web Jigsaw, qui à son tour sera laissé dans un état "stable"^[<<Q1.8.3,16>>]^.
+
+
+=== [[R1.9]] Qu'est-ce qu'un serveur mandataire ?^[<<Q1.9,17>>]^
+Un serveur proxy (ou un serveur mandataire) est une application serveur qui agit comme intermédiaire entre un client demandant une ressource et le serveur fournissant cette ressource.
+
+Au lieu de se connecter directement à un serveur qui peut répondre à une demande de ressource, telle qu'un fichier ou une page Web, le client dirige la demande vers le serveur mandataire, qui évalue la demande et effectue les transactions réseau requises. 
+
+Cela sert de méthode pour simplifier ou contrôler la complexité de la demande, ou fournir des avantages supplémentaires tels que l'équilibrage de charge, la confidentialité ou la sécurité.
+
+Il existe plusieurs types de serveurs mandataires, comme par exemple les mandataires web. Leur rôle est de transférer les requêtes HTTP.
+
+Apache et NGINX peuvent tout à fait servir de serveurs mandataires en relayant les requêtes d'un client vers l'extérieur du réseau.
+
+=== [[R1.10]] Comment peut-on savoir à quels groupes appartient l'utilisateur user ?^[<<Q1.10,18>>]^
+Il suffit de taper la commande `groups` en tant qu'user ou bien `groups user` pour afficher les groupes d'user :
+
+[listing, shell]
+----
+user@serveur:~$ groups
+user cdrom floppy sudo audio dip video plugdev netdev lpadmin
+----
+
+=== [[R1.11]] Quelle est la version du noyau Linux utilisé par votre VM ?^[<<Q1.11,19>>]^
+La commande `uname -r` permet d'afficher la version du noyau de notre système d'exploitation :
+
+[listing, shell]
+----
+user@serveur:~$ uname -r
+5.10.0-21-amd64
+----
+
+=== [[R1.12]] À quoi servent les suppléments invités ? Donner 2 principales raisons de les installer^[<<Q1.12,20>>]^
+
+Les Additions invité VirtualBox comprennent des pilotes de périphériques et des applications système qui optimisent le système d'exploitation pour de meilleures performances et une utilisation optimale. 
+
+Voici 2 raisons de les installer :
+
+. Ils permettent d'activer l'accélération graphique 3D pour la machine virtuelle, ce qui peut améliorer considérablement les performances graphiques et la réactivité de l'interface utilisateur
+. Ils offrent également un certain nombre de fonctionnalités avancées pour la machine virtuelle, notamment la prise en charge de la résolution d'écran dynamique, le partage de fichiers entre l'hôte et la machine virtuelle, la prise en charge du copier-coller entre l'hôte et la machine virtuelle, et la possibilité de passer en mode plein écran
+
+=== À quoi sert la commande mount (dans notre cas de figure et dans le cas général) ?
+
+[[R1.13.1]] Dans notre cas, mount sert à monter notre périphérique virtuel, à savoir le CD, dans le réportoire `/mnt`. Dans le cas général, ce répertoire est un point de montage générique sous lequel on monte les systèmes de fichiers ou périphériques.^[<<Q1.13.1,21>>]^
+
+[[R1.13.2]] Le montage est le processus par lequel on rend un système de fichiers disponible pour le système. Après le montage, les fichiers sont  accessibles dans le point de montage spécifié.
+
+La commande `mount` permet de monter un système de fichier sous un point de montage^[<<Q1.13.2,22>>]^.
+
+.Sources : 
+- [<<R1.1,1>>] : link:https://www.debian.org/releases/bullseye/installmanual[debian.org ; Debian bullseye - Installation Guide] [[Q1.1.1]]
+- [<<R1.1,2>>] : link:https://fr.wikipedia.org/wiki/Jeu_d%27instructions[wikipedia.org ; Jeu d'instructions] [[Q1.1.2]]
+- [<<R1.2,3>>] : link:https://www.virtualbox.org/manual/ch06.html#network_nat_service[virtualbox.org ; Network Address Translation Service] [[Q1.2]]
+- [<<R1.5.1,4>>] : link:https://en.wikipedia.org/wiki/ISO_9660[wikipedia.org ; ISO 9660] [[Q1.5.1]]
+- [<<R1.5.1,5>>] : link:https://wiki.osdev.org/ISO_9660[osdev.org ; ISO 9660] [[Q1.5.2]]
+- [<<R1.5.2,6>>] : link:https://wiki.osdev.org/Boot_Sequence[osdev.org ; Boot Sequence] [[Q1.5.3]]
+- [<<R1.6.1,7>>] : link:https://wiki.debian.org/fr/DesktopEnvironment[wiki.debian.org ; DesktopEnvironment] [[Q1.6.1]]
+- [<<R1.6.2,8>>] : link:https://wiki.debian.org/fr/MATE[wiki.debian.org ; Mate] [[Q1.6.2]]
+- [<<R1.7.1,9>>] : link:https://www.ssh.com/academy/ssh/protocol[ssh.com ; SSH Protocol] [[Q1.7.1]]
+- [<<R1.7.2,10>>] : link:https://manpages.debian.org/stretch/openssh-server/sshd.8.en.html[manpages.debian.org ; sshd] [[Q1.7.2]]
+- [<<R1.7.3,11>>] : link:https://en.wikipedia.org/wiki/Comparison_of_SSH_servers[wikipedia.org ; Comparison of SSH servers] [[Q1.7.3]]
+- [<<R1.7.3,12>>] : link:https://fr.wikipedia.org/wiki/Daemon_(informatique)[wikipedia.org ; Daemon (informatique)] [[Q1.7.4]]
+- [<<R1.7.5,13>>] : link:https://linux.die.net/man/8/dropbear[linux.die.net ; dropbear] [[Q1.7.5]]
+- [<<R1.8.1,14>>] : link:https://fr.wikipedia.org/wiki/Serveur_web[wikipedia.org ; Serveur web] [[Q1.8.1]]
+- [<<R1.8.2,15>>] : link:https://www.w3.org/Daemon/[w3.org ; CERN httpd] [[Q1.8.2]]
+- [<<R1.8.3,16>>] : link:https://www.w3.org/Daemon/Activity.html[w3.org ; W3C Activity: The CERN server] [[Q1.8.3]]
+- [<<R1.9,17>>] : link:https://en.wikipedia.org/wiki/Proxy_server[wikipedia.org ; Proxy server] [[Q1.9]]
+- [<<R1.10,18>>] : link:https://docs.oracle.com/cd/E26217_01/E35193/html/qs-guest-additions.html[oracle.com ; Installation des Additions invité VirtualBox] [[Q1.10]]
+- [<<R1.11,19>>] : link:https://manpages.debian.org/testing/coreutils/groups.1.en.html[manpages.debian.org ; groups] [[Q1.11]]
+- [<<R1.12,20>>] : link:https://manpages.debian.org/stretch/coreutils/uname.1.en.html[manpages.debian.org ; uname] [[Q1.12]]
+- [<<R1.13.1,21>>] : link:https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/mnt.html[tldp.org ; Linux Filesystem Hierarchy] [[Q1.13.1]]
+- [<<R1.13.2,22>>] : link:https://manpages.debian.org/testing/mount/mount.8.en.html[manpages.debian.org ; mount] [[Q1.13.2]]
+
+== Rapport détaillé semaine 6-7
+
+Lors de la semaine 6, il nous avait été demandé de créer chacun une machine virtuelle avec le système d'exploitation Debian 11 et l'environnement graphique MATE, et avec au moins 2 utilisateurs et quelques logiciels de départ.
+
+=== Création de la machine virtuelle
+
+Nous avons donc créé chacun une VM respectant les caractéristiques indiquées, entre autres 2048 Mo de RAM et 20 Go d'espace disque.
+
+Afin d'installer le système d'exploitation, nous sommes allés récupérer l'ISO d'installation réseau pour jeu d'instructions amd64.
+
+[NOTE]
+====
+*_Problème_* : Pour Quentin, l'installation échoue. Après une vérification de la somme de contrôle de l'ISO, il est établi que l'image d'installation est corrompue.
+
+*_Solution_* : Il s'est avéré que cela était dû à l'atteinte du quota d'espace de sa session. Une fois ce problème résolu, il reprit l'installation sans heurts
+====
+
+=== Installation du système
+
+Le système a été installé selon le programme d'installation graphique, en laissant les valeurs par défaut pour la plupart. 
+
+.Voici les paramètres notables que nous avons réglés :
+* La langue du système est française
+* Le mot de passe superutilisateur est `root`
+* Le compte d'utilisateur a pour nom `User`, pour login `user` et pour mot de passe `user`
+* Le miroir de l'archive est `debian.polytech-lille.fr`
+* Le mandataire HTTP est `http://cache.univ-lille.fr:3128`
+* Les logiciels supplémentaires installés sont :
+** MATE (environnement de bureau Debian)
+** serveur web
+** serveur ssh
+** utilitaires usuels du système
+
+=== Préparation du système
+
+Une fois l'installation terminée, nous avons donné l'accès sudo à l'utilisateur `user`.
+
+Pour ce faire, nous utilisons la commande en tant que root : `usermod -aG sudo user`
+
+[NOTE]
+====
+*_Problème :_* le bash nous renvoie une erreur disant que la commande est introuvable.
+
+*_Solution :_* il se trouve que la commande `usermod` siège dans les répertoires `/usr/sbin` et `/sbin`, qui ne sont pas dans la variable d'environnement `$PATH`. 
+====
+
+Plutôt que de modifier cette dernière directement, nous exécutons la commande en utilisant le chemin d'accès absolu : 
+
+[listing, shell]
+----
+root@serveur:/# /sbin/usermod -aG sudo user
+----
+
+Pour finaliser l'ajout, il suffit de recharger la session de `user`.
+
+=== Installation des suppléments invités
+
+Pour installer les additions invités, il suffit d'aller dans la barre de menu de notre fenêtre VirtualBox puis de cliquer sur _Périphériques > Insérer l’image CD des additions invités..._ 
+
+Ensuite, en tant que `user`, on monte le CD sous notre point de montage `/mnt` :
+[listing, shell]
+----
+user@serveur:~$ sudo mount /dev/cdrom /mnt
+----
+
+Puis d'exécuter la commande suivante pour les installer :
+[listing, shell]
+----
+user@serveur:~$ sudo /mnt/VBoxLinuxAdditions.run
+----
+
+Et enfin de redémarrer notre machine, se reconnecter en tant que `user` et admirer la magie que nous propose les additions invités en redimensionnant la fenêtre.
+
+== Interfaces clientes Git : analyse comparative
+
+
+[cols="^a,^a,^a,^a,^a,^a"]
+|===
+|  | *GitHub Desktop* | *Tortoisegit* | *SourceTree* | *GitKraken* | *Git Extensions*
+| icon:windows[] Windows | [green]#icon:check[]# | [green]#icon:check[]# | [green]#icon:check[]# | [green]#icon:check[]# | [green]#icon:check[]#
+| icon:linux[] Linux | [red]#icon:remove[]# | [red]#icon:remove[]# | [red]#icon:remove[]# | [green]#icon:check[]# | [green]#icon:check[]#
+| icon:apple[] Mac | [green]#icon:check[]# | [red]#icon:remove[]# | [green]#icon:check[]# | [green]#icon:check[]# | [green]#icon:check[]#
+| Licence | MIT | GNU GPL | GNU GPL | [red]#Propriétaire# | GNU GPL
+| € Prix | [green]#Gratuit# | [green]#Gratuit# | [green]#Gratuit# | [yellow]#Gratuit en non-commercial, sinon 4€95/utilisateur/mois#  | [green]#Gratuit#
+| Avantages | - Interface moderne et intuitive
+- Intégration complète avec GitHub | - Enitèrement fondé sur l'intégration dans l'explorateur Windows
+- Personnalisation des actions Git via l'interface graphique
+- Supporte une grande variété de fonctionnalités Git | - Interface utilisateur intuitive pour la gestion des dépôts Git et Mercurial
+- Supporte des fonctionnalités avancées telles que la gestion des branches et la visualisation des différences
+- Intégration transparente avec la plateforme Atlassian | - Interface utilisateur moderne et élégante pour les débutants
+- Intégration transparente avec plusieurs plateformes de gestion de code source | - Personnalisation des raccourcis claviers
+- Intégration transparente avec plusieurs plateformes de gestion de code source
+| Inconvénients | - Limité aux dépôts GitHub | - Interface utilisateur complexe pour les débutants | - Consommation de ressources système élevée | - Certaines fonctionnalités avancées sont réservées aux abonnements payants | - Interface utilisateur obsolète pour les débutants
+|===
+
+== Préliminaire à l'installation de Gitea
+
+=== Configuration globale de git
+
+==== Qu’est-ce que le logiciel git-gui ? Comment se lance-t-il ?^[<<Q4.1,23>>]^ [[R4.1]]
+Git Gui est l'interface graphique d'un outil en ligne de commande. De ce fait, toutes les possibilités offertes par Git ne sont pas disponibles dans Git Gui.
+Pour le lancer il faut utiliser la commande : `$ git gui`.
+
+==== Mêmes questions avec gitk.^[<<Q4.2,24>>]^ [[R4.2]]
+gitk est un navigateur de dépôt graphique, le premier de son genre. Il peut être considéré comme un encapsuleur graphique pour git log . Il permet d'explorer et de visualiser l'historique d'un dépôt. 
+
+==== Quelle sera la ligne de commande git pour utiliser par défaut le proxy de l’université sur tous vos projets git ?
+La commande en question est : `$ git config --global http.proxy http://cache.univ-lille.fr:3128`.
+
+=== Accéder au port 3000
+Il faut mettre le mode d'accès réseaux en _NAT_ puis faire une redirection de port en cliquant sur "avancé -> redirection de port". Ensuite il suffit d'ajouter une redirection comme montrer ci-dessous : 
+
+.Configuration du réseau de la VM
+image::CE_config_reseauVM.png[Capture d'écran de la confguration réseau de la VM]
+
+.Sources : 
+- [<<R4.1,23>>] : link:http://codeur-pro.fr/git-gui-guide-complet/[codeur-pro.fr ; Git Gui: le Guide Complet] [[Q4.1]]
+- [<<R4.2,24>>] : link:https://www.atlassian.com/fr/git/tutorials/gitk[atlassian.com ; gitk] [[Q4.2]]
+
+== Installation de Gitea
+
+=== À propos de Gitea
+
+==== Qu’est-ce que Gitea ?^[<<Q5.1.1,25>>]^ [[R5.1.1]]
+Gitea est un service Git auto-hébergé très simple à installer et à utiliser. Il est similaire à GitHub, Bitbucket ou Gitlab. Le but de ce projet est de fournir de la manière la plus simple, la plus rapide et sans complication un service Git auto-hébergé. Grâce à Go, cela peut se faire via un binaire indépendant fonctionnant sur toutes les plateformes que Go prend en charge, y compris Linux, macOS et Windows, même sur des architectures comme ARM ou PowerPC.
+
+==== À quels logiciels bien connus dans ce domaine peut-on le comparer (en citer au moins 2) ?^[<<Q5.1.1,25>>]^
+On peut le comparer à GitHub ou GitLab pour ne citer que les plus connus.
+
+=== Installations de Gitea
+==== Installation du binaire^[<<Q5.2.1,26>>]^ [[R5.2.1]]
+.Liste des commandes à éxecuter pour installer _Gitea_ :
+- `wget -O gitea https://dl.gitea.com/gitea/1.18.5/gitea-1.18.5-linux-amd64`
+- `chmod +x gitea`
+- `gpg --keyserver keys.openpgp.org --recv 7C9E68152594688862D62AF62D9AE806EC1592E2`
+- `gpg --verify gitea-1.18.5-linux-amd64.asc gitea-1.18.5-linux-amd64`
+- `sudo adduser --system --shell /bin/bash --gecos 'Git Version Control' --group --disabled-password --home /home/git git`
+- `sudo mkdir -p /var/lib/gitea/{custom,data,log}`
+- `sudo chown -R git:git /var/lib/gitea/`
+- `sudo chmod -R 750 /var/lib/gitea/`
+- `sudo mkdir /etc/gitea`
+- `sudo chown root:git /etc/gitea`
+- `sudo chmod 770 /etc/gitea`
+
+Puis pour finir : +
+`sudo cp gitea /usr/local/bin/gitea`
+
+
+Après l'installation, il faut utiliser ces commandes pour changer les droits sinon l'utilisateur git aura les droits d'écriture sur le fichier de configuration (ce qui n'est pas souhaitable) : +
+`sudo chmod 750 /etc/gitea` + 
+`sudo chmod 640 /etc/gitea/app.ini`
+
+==== Démarrage automatique du service^[<<Q5.2.2,27>>]^ [[R5.2.2]]
+Ajouter le contenu de https://github.com/go-gitea/gitea/blob/main/contrib/systemd/gitea.service[gitea.service] dans `/etc/systemd/system/gitea.service`. Puis pour démarrer gitea au moment du démarrage, il faut utiliser ces commandes : +
+- `sudo systemctl enable gitea` +
+- `sudo systemctl start gitea`
+
+ou si on a la version 220 de `systemd` : +
+`sudo systemctl enable gitea --now`
+
+====  Premier lancement : paramétrage de Gitea
+Pour vérifier si le service est bien démarré : `systemctl status gitea.service`
+
+Configuration du compte admin et de gitea :
+
+.Configuration de la base de donnée
+image::config_Gitea_part1.png[configuration de la base de donnée]
+
+.Configuration du compte administrateur
+image::config_gitea_part2.png[configuration du compte administrateur]
+
+==== Comment faire pour la mettre à jour sans devoir tout reconfigurer ? Essayez en mettant à jour vers la version 1.19.
+Il faut télécharger le fichier `upgrade.sh` sur le dépot GitHub suivant https://github.com/go-gitea/gitea/blob/main/contrib/upgrade.sh[upgrade.sh]. Puis, ajouter les droits d'éxecution dessus grâce à `chmod +x upgrade.sh`. Enfin, il suffit d'éxecuter cette commande : `sudo ./upgrade.sh -v _numéro-de-la-version_`.
+
+=== Utilisation basique
+
+.Création dépot sur gitea
+image::creation_depot_gitea.png[création dépot gitea] 
+
+.Sources :
+- [<<R5.1.1,25>>] : link:https://docs.gitea.io/fr-fr/[docs.gitea.io ; A propos de Gitea] [[Q5.1.1]]
+- [<<R5.2.1,26>>] : link:https://docs.gitea.io/en-us/install-from-binary/#download[docs.gitea.io ; Installation from binary] [[Q5.2.1]]
+- [<<R5.2.2,27>>] : link:https://docs.gitea.io/en-us/linux-service/[docs.gitea.io ; Run Gitea as Linux service] [[Q5.2.2]]

@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.18">
+<title>RAPPORT FINAL</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment the following line when using as a custom stylesheet */
+/* @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"; */
+html{font-family:sans-serif;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+b,strong{font-weight:bold}
+abbr{font-size:.9em}
+abbr[title]{cursor:help;border-bottom:1px dotted #dddddf;text-decoration:none}
+dfn{font-style:italic}
+hr{height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type=checkbox],input[type=radio]{padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,::before,::after{box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;line-height:1;position:relative;cursor:auto;-moz-tab-size:4;-o-tab-size:4;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:1px solid #dedede;word-wrap:normal}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;border-radius:3px;box-shadow:0 1px 0 rgba(0,0,0,.2),inset 0 0 0 .1em #fff;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin:0 auto;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border:1px solid #e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:hsla(0,0%,100%,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details{margin-left:1.25rem}
+details>summary{cursor:pointer;display:block;position:relative;line-height:1.6;margin-bottom:.625rem;outline:none;-webkit-tap-highlight-color:transparent}
+details>summary::-webkit-details-marker{display:none}
+details>summary::before{content:"";border:solid transparent;border-left:solid;border-width:.3em 0 .3em .5em;position:absolute;top:.5em;left:-1.25rem;transform:translateX(15%)}
+details[open]>summary::before{border:solid transparent;border-top:solid;border-width:.5em .3em 0;transform:translateY(15%)}
+details>summary::after{content:"";width:1.25rem;height:1em;position:absolute;top:.3em;left:-1.25rem}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class=paragraph]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class=highlight],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos,pre.pygments .linenos{border-right:1px solid;opacity:.35;padding-right:.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+pre.pygments span.linenos{display:inline-block;margin-right:.75em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans-serif;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;font-size:.85rem;text-align:left;margin-right:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
+table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
+table.frame-sides{border-width:0 1px}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
+table.stripes-all>*>tr,table.stripes-odd>*>tr:nth-of-type(odd),table.stripes-even>*>tr:nth-of-type(even),table.stripes-hover>*>tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+li>p:empty:only-child::before{content:"";display:inline-block}
+ul.checklist>li>p:first-child{margin-left:-1em}
+ul.checklist>li>p:first-child>.fa-square-o:first-child,ul.checklist>li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist>li>p:first-child>input[type=checkbox]:first-child{margin-right:.25em}
+ul.inline{display:flex;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:4px solid #fff;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]{border-bottom:1px dotted}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media amzn-kf8,print{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="book">
+<div id="header">
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<h2 id="_b_u_ti_n_f_o_r_m_a_t_i_q_u_e1" class="discrete text-center">B U T    I N F O R M A T I Q U E    1</h2>
+<h4 id="_saé_2_03_installation_de_services_réseaux" class="discrete text-center">SAÉ 2.03 – Installation de services réseaux</h4>
+<div class="paragraph">
+<p> <br></p>
+</div>
+<h1 id="_rapport_final" class="discrete text-center"><strong>RAPPORT FINAL</strong></h1>
+<div class="paragraph">
+<p> <br>
+<br></p>
+</div>
+<div class="paragraph text-center">
+<p>RÉALISÉ PAR<br>
+<br>
+<br>
+<a href="mailto:quentin.hamitouche.etu@univ-lille.fr">HAMITOUCHE Quentin</a><br>
+<a href="mailto:guillaume.dewisme.etu@univ-lille.fr">DEWISME Guillaume</a><br>
+<a href="mailto:theo.lenglart.etu@univ-lille.fr">LENGLART Théo</a><br>
+<br>
+<br>
+26 mars 2023
+<br>
+<br></p>
+</div>
+<hr>
+<div id="toc" class="toc">
+<div id="toctitle" class="title">Table des matières</div>
+<ul class="sectlevel1">
+<li><a href="#_questions_de_vocabulaire_et_de_culture_informatique">1. Questions de vocabulaire et de culture informatique</a>
+<ul class="sectlevel2">
+<li><a href="#_que_signifie_64_bit_dans_debian_64_bit_12">1.1.  Que signifie “64-bit” dans “Debian 64-bit” ?<sup>[1]</sup><sup>[2]</sup></a></li>
+<li><a href="#_quelle_est_la_configuration_réseau_utilisée_par_défaut_3">1.2.  Quelle est la configuration réseau utilisée par défaut ?<sup>[3]</sup></a></li>
+<li><a href="#_quel_est_le_nom_du_fichier_xml_contenant_la_configuration_de_votre_machine">1.3. Quel est le nom du fichier XML contenant la configuration de votre machine ?</a></li>
+<li><a href="#_sauriez_vous_le_modifier_directement_ce_fichier_pour_mettre_2_coeurs_à_votre_machine">1.4. Sauriez-vous le modifier directement ce fichier pour mettre 2 coeurs à votre machine ?</a></li>
+<li><a href="#_quest_ce_quun_fichier_iso_bootable">1.5. Qu&#8217;est-ce qu&#8217;un fichier iso bootable ?</a></li>
+<li><a href="#_quest_ce_que_mate_gnome">1.6. Qu&#8217;est-ce que MATE ? GNOME ?</a></li>
+<li><a href="#_quest_ce_quun_serveur_ssh">1.7. Qu&#8217;est-ce qu&#8217;un serveur ssh ?</a></li>
+<li><a href="#_quest_ce_quun_serveur_web">1.8. Qu&#8217;est-ce qu&#8217;un serveur web ?</a></li>
+<li><a href="#_quest_ce_quun_serveur_mandataire_17">1.9.  Qu&#8217;est-ce qu&#8217;un serveur mandataire ?<sup>[17]</sup></a></li>
+<li><a href="#_comment_peut_on_savoir_à_quels_groupes_appartient_lutilisateur_user_18">1.10.  Comment peut-on savoir à quels groupes appartient l&#8217;utilisateur user ?<sup>[18]</sup></a></li>
+<li><a href="#_quelle_est_la_version_du_noyau_linux_utilisé_par_votre_vm_19">1.11.  Quelle est la version du noyau Linux utilisé par votre VM ?<sup>[19]</sup></a></li>
+<li><a href="#_à_quoi_servent_les_suppléments_invités_donner_2_principales_raisons_de_les_installer20">1.12.  À quoi servent les suppléments invités ? Donner 2 principales raisons de les installer<sup>[20]</sup></a></li>
+<li><a href="#_à_quoi_sert_la_commande_mount_dans_notre_cas_de_figure_et_dans_le_cas_général">1.13. À quoi sert la commande mount (dans notre cas de figure et dans le cas général) ?</a></li>
+</ul>
+</li>
+<li><a href="#_rapport_détaillé_semaine_6_7">2. Rapport détaillé semaine 6-7</a>
+<ul class="sectlevel2">
+<li><a href="#_création_de_la_machine_virtuelle">2.1. Création de la machine virtuelle</a></li>
+<li><a href="#_installation_du_système">2.2. Installation du système</a></li>
+<li><a href="#_préparation_du_système">2.3. Préparation du système</a></li>
+<li><a href="#_installation_des_suppléments_invités">2.4. Installation des suppléments invités</a></li>
+</ul>
+</li>
+<li><a href="#_interfaces_clientes_git_analyse_comparative">3. Interfaces clientes Git : analyse comparative</a></li>
+<li><a href="#_préliminaire_à_linstallation_de_gitea">4. Préliminaire à l&#8217;installation de Gitea</a>
+<ul class="sectlevel2">
+<li><a href="#_configuration_globale_de_git">4.1. Configuration globale de git</a></li>
+<li><a href="#_accéder_au_port_3000">4.2. Accéder au port 3000</a></li>
+</ul>
+</li>
+<li><a href="#_installation_de_gitea">5. Installation de Gitea</a>
+<ul class="sectlevel2">
+<li><a href="#_à_propos_de_gitea">5.1. À propos de Gitea</a></li>
+<li><a href="#_installations_de_gitea">5.2. Installations de Gitea</a></li>
+<li><a href="#_utilisation_basique">5.3. Utilisation basique</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_questions_de_vocabulaire_et_de_culture_informatique">1. Questions de vocabulaire et de culture informatique</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_que_signifie_64_bit_dans_debian_64_bit_12">1.1. <a id="R1.1"></a> Que signifie “64-bit” dans “Debian 64-bit” ?<sup>[<a href="#Q1.1.1">1</a>]</sup><sup>[<a href="#Q1.1.2">2</a>]</sup></h3>
+<div class="paragraph">
+<p>« 64-bit » dans « Debian 64-bit » signifie que le système d&#8217;exploitation (c&#8217;est-à-dire le noyau et les paquets inclus dans le système) a été compilé pour être compatible avec le jeu d&#8217;instructions 64-bit.</p>
+</div>
+<div class="paragraph">
+<p>Pour être plus exact, il s&#8217;agit en réalité du jeu d&#8217;instructions PC 64 bits, aussi connu sous le nom d&#8217;amd64.
+Il existe plusieurs jeux d&#8217;instructions qui ont tous leurs spécificités et leurs utilisations propres, comme par exemple AArch64 (arm64), EABI ARM (armel), ou PC 32 bits (i386).</p>
+</div>
+<div class="paragraph">
+<p>Afin d&#8217;assurer la compatibilité avec les machines utilisant ces jeux d&#8217;instructions, les développeurs doivent compiler leurs systèmes en conséquence. Car les fichiers binaires résultants de la compilation d&#8217;un programme contiennent des instructions en langage machine, et c&#8217;est précisément celles-ci qui diffèrent d&#8217;un jeu d&#8217;instructions à l&#8217;autre.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_quelle_est_la_configuration_réseau_utilisée_par_défaut_3">1.2. <a id="R1.2"></a> Quelle est la configuration réseau utilisée par défaut ?<sup>[<a href="#Q1.2">3</a>]</sup></h3>
+<div class="paragraph">
+<p>La configuration réseau par défaut est en mode d&#8217;accès par NAT, ou Network Address Translation, soit littéralement traduction d&#8217;adresse réseau en français.</p>
+</div>
+<div class="paragraph">
+<p>Ce mode correspond au rôle traditionnel qu&#8217;on attribue à un routeur de foyer : le principe consiste à traduire les adresses IP privées des hôtes en une seule et même adresse publique, ce qui permet aux hôtes de communiquer entre elles tout en permettant aux appareils en dehors du réseau de communiquer avec celles-ci.</p>
+</div>
+<div class="paragraph">
+<p>Dans notre cas, VirtualBox virtualise une carte réseau Intel PRO/1000 MT Desktop et simule le branchement en Ethernet de notre machine virtuelle à notre machine physique.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_quel_est_le_nom_du_fichier_xml_contenant_la_configuration_de_votre_machine">1.3. Quel est le nom du fichier XML contenant la configuration de votre machine ?</h3>
+<div class="paragraph">
+<p>Le nom du fichier XML contenant la configuration de notre machine virtuel est <code>sae203.vbox</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sauriez_vous_le_modifier_directement_ce_fichier_pour_mettre_2_coeurs_à_votre_machine">1.4. Sauriez-vous le modifier directement ce fichier pour mettre 2 coeurs à votre machine ?</h3>
+<div class="paragraph">
+<p>Pour modifier le nombre de coeurs de notre machine virtuelle, il faut modifier le fichier de configuration XML de notre machine virtuelle.</p>
+</div>
+<div class="paragraph">
+<p>Il suffit de modifier l&#8217;attribut <code>count</code> de la balise <code>CPU</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>sae203.vbox
+└── &lt;VirtualBox&gt;
+    └── &lt;Machine&gt;
+        └── &lt;Hardware&gt;
+            └── &lt;CPU count="2"&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_quest_ce_quun_fichier_iso_bootable">1.5. Qu&#8217;est-ce qu&#8217;un fichier iso bootable ?</h3>
+<div class="paragraph">
+<p><a id="R1.5.1"></a> Un fichier ISO est une archive contenant la copie conforme d&#8217;un disque optique, c&#8217;est-à-dire qu&#8217;il constitue l&#8217;image d&#8217;un disque sous le système de fichiers ISO 9960<sup>[<a href="#Q1.5.1">4</a>]</sup><sup>[<a href="#Q1.5.2">5</a>]</sup>.</p>
+</div>
+<div class="paragraph">
+<p>Pour que Virtualbox démarre à partir d&#8217;un fichier ISO, on remarquera qu&#8217;il faut ouvrir notre fichier  en tant qu&#8217;image disque chargée à partir d&#8217;un lecteur de disque virtuel. À partir de ce moment, Virtualbox fait comme si l&#8217;ISO était un CD ou un DVD inséré dans un lecteur optique.</p>
+</div>
+<div class="paragraph">
+<p><a id="R1.5.2"></a> Un disque est dit bootable ou amorçable si le premier secteur constitue un secteur d&#8217;amorçage valide, comme un MBR (Master Boot Record). Le cas échéant, la machine exécute le bootloader ou chargeur d&#8217;amorçage présent dans ce secteur, qui se charge du reste de la séquence de démarrage de la machine<sup>[<a href="#Q1.5.3">6</a>]</sup>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_quest_ce_que_mate_gnome">1.6. Qu&#8217;est-ce que MATE ? GNOME ?</h3>
+<div class="paragraph">
+<p>MATE et GNOME sont deux environnements de bureau pour le système d&#8217;exploitation GNU/Linux.</p>
+</div>
+<div class="paragraph">
+<p><a id="R1.6.1"></a> Un environnement de bureau fournit un ensemble cohérent d&#8217;applications en terme d&#8217;apparence, de fonctionnalité et convivialité. Plus simplement dit, c&#8217;est l&#8217;interface utilisateur<sup>[<a href="#Q1.6.1">7</a>]</sup>.</p>
+</div>
+<div class="paragraph">
+<p><a id="R1.6.2"></a> MATE est la continuation de GNOME 2 par une communauté non satisfaite par GNOME 3. Il inclut des applications utiles tels qu&#8217;un gestionnaire de fichiers, un éditeur de texte, ou un visualiseur d&#8217;images. Toutes ces applications sont des dérivées des anciennes applications de GNOME 2, par exemple Caja est une divergence du gestionnaire de fichiers Nautilus pour GNOME.<sup>[<a href="#Q1.6.2">8</a>]</sup></p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/gnome.png" alt="Capture d&#8217;écran de l&#8217;environnement de bureau GNOME 3">
+</div>
+<div class="title">Figure 1. Capture d&#8217;écran de l&#8217;environnement de bureau GNOME 3</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/mate.png" alt="Capture d&#8217;écran de l&#8217;environnement de bureau MATE">
+</div>
+<div class="title">Figure 2. Capture d&#8217;écran de l&#8217;environnement de bureau MATE</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_quest_ce_quun_serveur_ssh">1.7. Qu&#8217;est-ce qu&#8217;un serveur ssh ?</h3>
+<div class="paragraph">
+<p><a id="R1.7.1"></a> Le protocole SSH (Secure Shell) est une méthode de connexion à distance sécurisée d&#8217;un ordinateur à un autre. Il fournit plusieurs options alternatives pour une authentification forte et protège la sécurité et l&#8217;intégrité des communications avec un chiffrement fort<sup>[<a href="#Q1.7.1">9</a>]</sup>.</p>
+</div>
+<div class="paragraph">
+<p><a id="R1.7.2"></a> Le protocole SSH fonctionne sur le modèle client/serveur. Le client SSH lance toujours la configuration de la connexion sécurisée et le serveur SSH écoute les demandes de connexion entrantes (généralement sur le port TCP 22 du système hôte) et y répond<sup>[<a href="#Q1.7.2">10</a>]</sup>.</p>
+</div>
+<div class="paragraph">
+<p><a id="R1.7.3"></a> Il existe plusieurs serveurs SSH. Le plus connu d&#8217;entre eux est SSHD pour <em>OpenSSH SSH daemon</em><sup>[<a href="#Q1.7.3">11</a>]</sup>, un <em>daemon</em> étant un programme qui s&#8217;exécute en arrière-plan<sup>[<a href="#Q1.7.4">12</a>]</sup>.</p>
+</div>
+<div class="paragraph">
+<p><a id="R1.7.5"></a> Un autre exemple de serveur SSH est  <em>Dropbear</em>, qui a été conçu pour des environnements à faible mémoire et ressources processeur<sup>[<a href="#Q1.7.5">13</a>]</sup>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_quest_ce_quun_serveur_web">1.8. Qu&#8217;est-ce qu&#8217;un serveur web ?</h3>
+<div class="paragraph">
+<p><a id="R1.8.1"></a> Un serveur web, ou un serveur HTTP, est un logiciel servant des ressources à travers principalement le protocole HTTP, qui permet le dialogue via le réseau avec le logiciel client, généralement un navigateur web.</p>
+</div>
+<div class="paragraph">
+<p>Le protocole HTTP a été développé pour le web, et les pages web sont en pratique toujours servies avec ce protocole. Cependant d&#8217;autres ressources du Web comme les fichiers à télécharger ou les flux audio ou vidéo sont parfois servis avec d&#8217;autres protocoles, telle que, par exemple, le protocole de transport Temps Réel (Real-time Transport Protocol)<sup>[<a href="#Q1.8.1">14</a>]</sup>.</p>
+</div>
+<div class="paragraph">
+<p><a id="R1.8.2"></a> Deux exemples de serveurs web connus sont NGINX et Apache, toutefois, il est intéressant que tout premier serveur web, écrit par Tim Berners-Lee au sein d&#8217;une équipe du CERN en 1990 se nomme CERN httpd (puis W3C httpd)<sup>[<a href="#Q1.8.2">15</a>]</sup>.</p>
+</div>
+<div class="paragraph">
+<p><a id="R1.8.3"></a> Le logiciel a été laissé à l&#8217;abandon depuis la sortie de sa version finale en 1995, considéré comme stable par le W3C, qui a préféré le délaisser au profit du serveur web Jigsaw, qui à son tour sera laissé dans un état "stable"<sup>[<a href="#Q1.8.3">16</a>]</sup>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_quest_ce_quun_serveur_mandataire_17">1.9. <a id="R1.9"></a> Qu&#8217;est-ce qu&#8217;un serveur mandataire ?<sup>[<a href="#Q1.9">17</a>]</sup></h3>
+<div class="paragraph">
+<p>Un serveur proxy (ou un serveur mandataire) est une application serveur qui agit comme intermédiaire entre un client demandant une ressource et le serveur fournissant cette ressource.</p>
+</div>
+<div class="paragraph">
+<p>Au lieu de se connecter directement à un serveur qui peut répondre à une demande de ressource, telle qu&#8217;un fichier ou une page Web, le client dirige la demande vers le serveur mandataire, qui évalue la demande et effectue les transactions réseau requises.</p>
+</div>
+<div class="paragraph">
+<p>Cela sert de méthode pour simplifier ou contrôler la complexité de la demande, ou fournir des avantages supplémentaires tels que l&#8217;équilibrage de charge, la confidentialité ou la sécurité.</p>
+</div>
+<div class="paragraph">
+<p>Il existe plusieurs types de serveurs mandataires, comme par exemple les mandataires web. Leur rôle est de transférer les requêtes HTTP.</p>
+</div>
+<div class="paragraph">
+<p>Apache et NGINX peuvent tout à fait servir de serveurs mandataires en relayant les requêtes d&#8217;un client vers l&#8217;extérieur du réseau.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_comment_peut_on_savoir_à_quels_groupes_appartient_lutilisateur_user_18">1.10. <a id="R1.10"></a> Comment peut-on savoir à quels groupes appartient l&#8217;utilisateur user ?<sup>[<a href="#Q1.10">18</a>]</sup></h3>
+<div class="paragraph">
+<p>Il suffit de taper la commande <code>groups</code> en tant qu&#8217;user ou bien <code>groups user</code> pour afficher les groupes d&#8217;user :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>user@serveur:~$ groups
+user cdrom floppy sudo audio dip video plugdev netdev lpadmin</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_quelle_est_la_version_du_noyau_linux_utilisé_par_votre_vm_19">1.11. <a id="R1.11"></a> Quelle est la version du noyau Linux utilisé par votre VM ?<sup>[<a href="#Q1.11">19</a>]</sup></h3>
+<div class="paragraph">
+<p>La commande <code>uname -r</code> permet d&#8217;afficher la version du noyau de notre système d&#8217;exploitation :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>user@serveur:~$ uname -r
+5.10.0-21-amd64</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_à_quoi_servent_les_suppléments_invités_donner_2_principales_raisons_de_les_installer20">1.12. <a id="R1.12"></a> À quoi servent les suppléments invités ? Donner 2 principales raisons de les installer<sup>[<a href="#Q1.12">20</a>]</sup></h3>
+<div class="paragraph">
+<p>Les Additions invité VirtualBox comprennent des pilotes de périphériques et des applications système qui optimisent le système d&#8217;exploitation pour de meilleures performances et une utilisation optimale.</p>
+</div>
+<div class="paragraph">
+<p>Voici 2 raisons de les installer :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ils permettent d&#8217;activer l&#8217;accélération graphique 3D pour la machine virtuelle, ce qui peut améliorer considérablement les performances graphiques et la réactivité de l&#8217;interface utilisateur</p>
+</li>
+<li>
+<p>Ils offrent également un certain nombre de fonctionnalités avancées pour la machine virtuelle, notamment la prise en charge de la résolution d&#8217;écran dynamique, le partage de fichiers entre l&#8217;hôte et la machine virtuelle, la prise en charge du copier-coller entre l&#8217;hôte et la machine virtuelle, et la possibilité de passer en mode plein écran</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_à_quoi_sert_la_commande_mount_dans_notre_cas_de_figure_et_dans_le_cas_général">1.13. À quoi sert la commande mount (dans notre cas de figure et dans le cas général) ?</h3>
+<div class="paragraph">
+<p><a id="R1.13.1"></a> Dans notre cas, mount sert à monter notre périphérique virtuel, à savoir le CD, dans le réportoire <code>/mnt</code>. Dans le cas général, ce répertoire est un point de montage générique sous lequel on monte les systèmes de fichiers ou périphériques.<sup>[<a href="#Q1.13.1">21</a>]</sup></p>
+</div>
+<div class="paragraph">
+<p><a id="R1.13.2"></a> Le montage est le processus par lequel on rend un système de fichiers disponible pour le système. Après le montage, les fichiers sont  accessibles dans le point de montage spécifié.</p>
+</div>
+<div class="paragraph">
+<p>La commande <code>mount</code> permet de monter un système de fichier sous un point de montage<sup>[<a href="#Q1.13.2">22</a>]</sup>.</p>
+</div>
+<div class="ulist">
+<div class="title">Sources :</div>
+<ul>
+<li>
+<p>[<a href="#R1.1">1</a>] : <a href="https://www.debian.org/releases/bullseye/installmanual">debian.org ; Debian bullseye - Installation Guide</a> <a id="Q1.1.1"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.1">2</a>] : <a href="https://fr.wikipedia.org/wiki/Jeu_d%27instructions">wikipedia.org ; Jeu d&#8217;instructions</a> <a id="Q1.1.2"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.2">3</a>] : <a href="https://www.virtualbox.org/manual/ch06.html#network_nat_service">virtualbox.org ; Network Address Translation Service</a> <a id="Q1.2"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.5.1">4</a>] : <a href="https://en.wikipedia.org/wiki/ISO_9660">wikipedia.org ; ISO 9660</a> <a id="Q1.5.1"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.5.1">5</a>] : <a href="https://wiki.osdev.org/ISO_9660">osdev.org ; ISO 9660</a> <a id="Q1.5.2"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.5.2">6</a>] : <a href="https://wiki.osdev.org/Boot_Sequence">osdev.org ; Boot Sequence</a> <a id="Q1.5.3"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.6.1">7</a>] : <a href="https://wiki.debian.org/fr/DesktopEnvironment">wiki.debian.org ; DesktopEnvironment</a> <a id="Q1.6.1"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.6.2">8</a>] : <a href="https://wiki.debian.org/fr/MATE">wiki.debian.org ; Mate</a> <a id="Q1.6.2"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.7.1">9</a>] : <a href="https://www.ssh.com/academy/ssh/protocol">ssh.com ; SSH Protocol</a> <a id="Q1.7.1"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.7.2">10</a>] : <a href="https://manpages.debian.org/stretch/openssh-server/sshd.8.en.html">manpages.debian.org ; sshd</a> <a id="Q1.7.2"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.7.3">11</a>] : <a href="https://en.wikipedia.org/wiki/Comparison_of_SSH_servers">wikipedia.org ; Comparison of SSH servers</a> <a id="Q1.7.3"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.7.3">12</a>] : <a href="https://fr.wikipedia.org/wiki/Daemon_(informatique)">wikipedia.org ; Daemon (informatique)</a> <a id="Q1.7.4"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.7.5">13</a>] : <a href="https://linux.die.net/man/8/dropbear">linux.die.net ; dropbear</a> <a id="Q1.7.5"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.8.1">14</a>] : <a href="https://fr.wikipedia.org/wiki/Serveur_web">wikipedia.org ; Serveur web</a> <a id="Q1.8.1"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.8.2">15</a>] : <a href="https://www.w3.org/Daemon/">w3.org ; CERN httpd</a> <a id="Q1.8.2"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.8.3">16</a>] : <a href="https://www.w3.org/Daemon/Activity.html">w3.org ; W3C Activity: The CERN server</a> <a id="Q1.8.3"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.9">17</a>] : <a href="https://en.wikipedia.org/wiki/Proxy_server">wikipedia.org ; Proxy server</a> <a id="Q1.9"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.10">18</a>] : <a href="https://docs.oracle.com/cd/E26217_01/E35193/html/qs-guest-additions.html">oracle.com ; Installation des Additions invité VirtualBox</a> <a id="Q1.10"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.11">19</a>] : <a href="https://manpages.debian.org/testing/coreutils/groups.1.en.html">manpages.debian.org ; groups</a> <a id="Q1.11"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.12">20</a>] : <a href="https://manpages.debian.org/stretch/coreutils/uname.1.en.html">manpages.debian.org ; uname</a> <a id="Q1.12"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.13.1">21</a>] : <a href="https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/mnt.html">tldp.org ; Linux Filesystem Hierarchy</a> <a id="Q1.13.1"></a></p>
+</li>
+<li>
+<p>[<a href="#R1.13.2">22</a>] : <a href="https://manpages.debian.org/testing/mount/mount.8.en.html">manpages.debian.org ; mount</a> <a id="Q1.13.2"></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_rapport_détaillé_semaine_6_7">2. Rapport détaillé semaine 6-7</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lors de la semaine 6, il nous avait été demandé de créer chacun une machine virtuelle avec le système d&#8217;exploitation Debian 11 et l&#8217;environnement graphique MATE, et avec au moins 2 utilisateurs et quelques logiciels de départ.</p>
+</div>
+<div class="sect2">
+<h3 id="_création_de_la_machine_virtuelle">2.1. Création de la machine virtuelle</h3>
+<div class="paragraph">
+<p>Nous avons donc créé chacun une VM respectant les caractéristiques indiquées, entre autres 2048 Mo de RAM et 20 Go d&#8217;espace disque.</p>
+</div>
+<div class="paragraph">
+<p>Afin d&#8217;installer le système d&#8217;exploitation, nous sommes allés récupérer l&#8217;ISO d&#8217;installation réseau pour jeu d&#8217;instructions amd64.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong><em>Problème</em></strong> : Pour Quentin, l&#8217;installation échoue. Après une vérification de la somme de contrôle de l&#8217;ISO, il est établi que l&#8217;image d&#8217;installation est corrompue.</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Solution</em></strong> : Il s&#8217;est avéré que cela était dû à l&#8217;atteinte du quota d&#8217;espace de sa session. Une fois ce problème résolu, il reprit l&#8217;installation sans heurts</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installation_du_système">2.2. Installation du système</h3>
+<div class="paragraph">
+<p>Le système a été installé selon le programme d&#8217;installation graphique, en laissant les valeurs par défaut pour la plupart.</p>
+</div>
+<div class="ulist">
+<div class="title">Voici les paramètres notables que nous avons réglés :</div>
+<ul>
+<li>
+<p>La langue du système est française</p>
+</li>
+<li>
+<p>Le mot de passe superutilisateur est <code>root</code></p>
+</li>
+<li>
+<p>Le compte d&#8217;utilisateur a pour nom <code>User</code>, pour login <code>user</code> et pour mot de passe <code>user</code></p>
+</li>
+<li>
+<p>Le miroir de l&#8217;archive est <code>debian.polytech-lille.fr</code></p>
+</li>
+<li>
+<p>Le mandataire HTTP est <code><a href="http://cache.univ-lille.fr:3128" class="bare">http://cache.univ-lille.fr:3128</a></code></p>
+</li>
+<li>
+<p>Les logiciels supplémentaires installés sont :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>MATE (environnement de bureau Debian)</p>
+</li>
+<li>
+<p>serveur web</p>
+</li>
+<li>
+<p>serveur ssh</p>
+</li>
+<li>
+<p>utilitaires usuels du système</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_préparation_du_système">2.3. Préparation du système</h3>
+<div class="paragraph">
+<p>Une fois l&#8217;installation terminée, nous avons donné l&#8217;accès sudo à l&#8217;utilisateur <code>user</code>.</p>
+</div>
+<div class="paragraph">
+<p>Pour ce faire, nous utilisons la commande en tant que root : <code>usermod -aG sudo user</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong><em>Problème :</em></strong> le bash nous renvoie une erreur disant que la commande est introuvable.</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Solution :</em></strong> il se trouve que la commande <code>usermod</code> siège dans les répertoires <code>/usr/sbin</code> et <code>/sbin</code>, qui ne sont pas dans la variable d&#8217;environnement <code>$PATH</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Plutôt que de modifier cette dernière directement, nous exécutons la commande en utilisant le chemin d&#8217;accès absolu :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>root@serveur:/# /sbin/usermod -aG sudo user</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Pour finaliser l&#8217;ajout, il suffit de recharger la session de <code>user</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installation_des_suppléments_invités">2.4. Installation des suppléments invités</h3>
+<div class="paragraph">
+<p>Pour installer les additions invités, il suffit d&#8217;aller dans la barre de menu de notre fenêtre VirtualBox puis de cliquer sur <em>Périphériques &gt; Insérer l’image CD des additions invités&#8230;&#8203;</em></p>
+</div>
+<div class="paragraph">
+<p>Ensuite, en tant que <code>user</code>, on monte le CD sous notre point de montage <code>/mnt</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>user@serveur:~$ sudo mount /dev/cdrom /mnt</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Puis d&#8217;exécuter la commande suivante pour les installer :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>user@serveur:~$ sudo /mnt/VBoxLinuxAdditions.run</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Et enfin de redémarrer notre machine, se reconnecter en tant que <code>user</code> et admirer la magie que nous propose les additions invités en redimensionnant la fenêtre.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_interfaces_clientes_git_analyse_comparative">3. Interfaces clientes Git : analyse comparative</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><strong>GitHub Desktop</strong></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><strong>Tortoisegit</strong></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><strong>SourceTree</strong></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><strong>GitKraken</strong></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><strong>Git Extensions</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-windows"></i></span> Windows</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="green"><span class="icon"><i class="fa fa-check"></i></span></span></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="green"><span class="icon"><i class="fa fa-check"></i></span></span></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="green"><span class="icon"><i class="fa fa-check"></i></span></span></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="green"><span class="icon"><i class="fa fa-check"></i></span></span></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="green"><span class="icon"><i class="fa fa-check"></i></span></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-linux"></i></span> Linux</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="red"><span class="icon"><i class="fa fa-remove"></i></span></span></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="red"><span class="icon"><i class="fa fa-remove"></i></span></span></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="red"><span class="icon"><i class="fa fa-remove"></i></span></span></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="green"><span class="icon"><i class="fa fa-check"></i></span></span></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="green"><span class="icon"><i class="fa fa-check"></i></span></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-apple"></i></span> Mac</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="green"><span class="icon"><i class="fa fa-check"></i></span></span></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="red"><span class="icon"><i class="fa fa-remove"></i></span></span></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="green"><span class="icon"><i class="fa fa-check"></i></span></span></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="green"><span class="icon"><i class="fa fa-check"></i></span></span></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="green"><span class="icon"><i class="fa fa-check"></i></span></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Licence</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>MIT</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>GNU GPL</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>GNU GPL</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="red">Propriétaire</span></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>GNU GPL</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>€ Prix</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="green">Gratuit</span></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="green">Gratuit</span></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="green">Gratuit</span></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="yellow">Gratuit en non-commercial, sinon 4€95/utilisateur/mois</span></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p><span class="green">Gratuit</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Avantages</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Interface moderne et intuitive</p>
+</li>
+<li>
+<p>Intégration complète avec GitHub</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Enitèrement fondé sur l&#8217;intégration dans l&#8217;explorateur Windows</p>
+</li>
+<li>
+<p>Personnalisation des actions Git via l&#8217;interface graphique</p>
+</li>
+<li>
+<p>Supporte une grande variété de fonctionnalités Git</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Interface utilisateur intuitive pour la gestion des dépôts Git et Mercurial</p>
+</li>
+<li>
+<p>Supporte des fonctionnalités avancées telles que la gestion des branches et la visualisation des différences</p>
+</li>
+<li>
+<p>Intégration transparente avec la plateforme Atlassian</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Interface utilisateur moderne et élégante pour les débutants</p>
+</li>
+<li>
+<p>Intégration transparente avec plusieurs plateformes de gestion de code source</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Personnalisation des raccourcis claviers</p>
+</li>
+<li>
+<p>Intégration transparente avec plusieurs plateformes de gestion de code source</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Inconvénients</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Limité aux dépôts GitHub</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Interface utilisateur complexe pour les débutants</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Consommation de ressources système élevée</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Certaines fonctionnalités avancées sont réservées aux abonnements payants</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Interface utilisateur obsolète pour les débutants</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_préliminaire_à_linstallation_de_gitea">4. Préliminaire à l&#8217;installation de Gitea</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_configuration_globale_de_git">4.1. Configuration globale de git</h3>
+<div class="sect3">
+<h4 id="R4.1">4.1.1. Qu’est-ce que le logiciel git-gui ? Comment se lance-t-il ?<sup>[<a href="#Q4.1">23</a>]</sup></h4>
+<div class="paragraph">
+<p>Git Gui est l&#8217;interface graphique d&#8217;un outil en ligne de commande. De ce fait, toutes les possibilités offertes par Git ne sont pas disponibles dans Git Gui.
+Pour le lancer il faut utiliser la commande : <code>$ git gui</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="R4.2">4.1.2. Mêmes questions avec gitk.<sup>[<a href="#Q4.2">24</a>]</sup></h4>
+<div class="paragraph">
+<p>gitk est un navigateur de dépôt graphique, le premier de son genre. Il peut être considéré comme un encapsuleur graphique pour git log . Il permet d&#8217;explorer et de visualiser l&#8217;historique d&#8217;un dépôt.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_quelle_sera_la_ligne_de_commande_git_pour_utiliser_par_défaut_le_proxy_de_luniversité_sur_tous_vos_projets_git">4.1.3. Quelle sera la ligne de commande git pour utiliser par défaut le proxy de l’université sur tous vos projets git ?</h4>
+<div class="paragraph">
+<p>La commande en question est : <code>$ git config --global http.proxy <a href="http://cache.univ-lille.fr:3128" class="bare">http://cache.univ-lille.fr:3128</a></code>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_accéder_au_port_3000">4.2. Accéder au port 3000</h3>
+<div class="paragraph">
+<p>Il faut mettre le mode d&#8217;accès réseaux en <em>NAT</em> puis faire une redirection de port en cliquant sur "avancé &#8594; redirection de port". Ensuite il suffit d&#8217;ajouter une redirection comme montrer ci-dessous :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/CE_config_reseauVM.png" alt="Capture d&#8217;écran de la confguration réseau de la VM">
+</div>
+<div class="title">Figure 3. Configuration du réseau de la VM</div>
+</div>
+<div class="ulist">
+<div class="title">Sources :</div>
+<ul>
+<li>
+<p>[<a href="#R4.1">23</a>] : <a href="http://codeur-pro.fr/git-gui-guide-complet/">codeur-pro.fr ; Git Gui: le Guide Complet</a> <a id="Q4.1"></a></p>
+</li>
+<li>
+<p>[<a href="#R4.2">24</a>] : <a href="https://www.atlassian.com/fr/git/tutorials/gitk">atlassian.com ; gitk</a> <a id="Q4.2"></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installation_de_gitea">5. Installation de Gitea</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_à_propos_de_gitea">5.1. À propos de Gitea</h3>
+<div class="sect3">
+<h4 id="R5.1.1">5.1.1. Qu’est-ce que Gitea ?<sup>[<a href="#Q5.1.1">25</a>]</sup></h4>
+<div class="paragraph">
+<p>Gitea est un service Git auto-hébergé très simple à installer et à utiliser. Il est similaire à GitHub, Bitbucket ou Gitlab. Le but de ce projet est de fournir de la manière la plus simple, la plus rapide et sans complication un service Git auto-hébergé. Grâce à Go, cela peut se faire via un binaire indépendant fonctionnant sur toutes les plateformes que Go prend en charge, y compris Linux, macOS et Windows, même sur des architectures comme ARM ou PowerPC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_à_quels_logiciels_bien_connus_dans_ce_domaine_peut_on_le_comparer_en_citer_au_moins_2_25">5.1.2. À quels logiciels bien connus dans ce domaine peut-on le comparer (en citer au moins 2) ?<sup>[<a href="#Q5.1.1">25</a>]</sup></h4>
+<div class="paragraph">
+<p>On peut le comparer à GitHub ou GitLab pour ne citer que les plus connus.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installations_de_gitea">5.2. Installations de Gitea</h3>
+<div class="sect3">
+<h4 id="R5.2.1">5.2.1. Installation du binaire<sup>[<a href="#Q5.2.1">26</a>]</sup></h4>
+<div class="ulist">
+<div class="title">Liste des commandes à éxecuter pour installer <em>Gitea</em> :</div>
+<ul>
+<li>
+<p><code>wget -O gitea <a href="https://dl.gitea.com/gitea/1.18.5/gitea-1.18.5-linux-amd64" class="bare">https://dl.gitea.com/gitea/1.18.5/gitea-1.18.5-linux-amd64</a></code></p>
+</li>
+<li>
+<p><code>chmod +x gitea</code></p>
+</li>
+<li>
+<p><code>gpg --keyserver keys.openpgp.org --recv 7C9E68152594688862D62AF62D9AE806EC1592E2</code></p>
+</li>
+<li>
+<p><code>gpg --verify gitea-1.18.5-linux-amd64.asc gitea-1.18.5-linux-amd64</code></p>
+</li>
+<li>
+<p><code>sudo adduser --system --shell /bin/bash --gecos 'Git Version Control' --group --disabled-password --home /home/git git</code></p>
+</li>
+<li>
+<p><code>sudo mkdir -p /var/lib/gitea/{custom,data,log}</code></p>
+</li>
+<li>
+<p><code>sudo chown -R git:git /var/lib/gitea/</code></p>
+</li>
+<li>
+<p><code>sudo chmod -R 750 /var/lib/gitea/</code></p>
+</li>
+<li>
+<p><code>sudo mkdir /etc/gitea</code></p>
+</li>
+<li>
+<p><code>sudo chown root:git /etc/gitea</code></p>
+</li>
+<li>
+<p><code>sudo chmod 770 /etc/gitea</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Puis pour finir :<br>
+<code>sudo cp gitea /usr/local/bin/gitea</code></p>
+</div>
+<div class="paragraph">
+<p>Après l&#8217;installation, il faut utiliser ces commandes pour changer les droits sinon l&#8217;utilisateur git aura les droits d&#8217;écriture sur le fichier de configuration (ce qui n&#8217;est pas souhaitable) :<br>
+<code>sudo chmod 750 /etc/gitea</code><br>
+<code>sudo chmod 640 /etc/gitea/app.ini</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="R5.2.2">5.2.2. Démarrage automatique du service<sup>[<a href="#Q5.2.2">27</a>]</sup></h4>
+<div class="paragraph">
+<p>Ajouter le contenu de <a href="https://github.com/go-gitea/gitea/blob/main/contrib/systemd/gitea.service">gitea.service</a> dans <code>/etc/systemd/system/gitea.service</code>. Puis pour démarrer gitea au moment du démarrage, il faut utiliser ces commandes :<br>
+- <code>sudo systemctl enable gitea</code><br>
+- <code>sudo systemctl start gitea</code></p>
+</div>
+<div class="paragraph">
+<p>ou si on a la version 220 de <code>systemd</code> :<br>
+<code>sudo systemctl enable gitea --now</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_premier_lancement_paramétrage_de_gitea">5.2.3. Premier lancement : paramétrage de Gitea</h4>
+<div class="paragraph">
+<p>Pour vérifier si le service est bien démarré : <code>systemctl status gitea.service</code></p>
+</div>
+<div class="paragraph">
+<p>Configuration du compte admin et de gitea :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/config_Gitea_part1.png" alt="configuration de la base de donnée">
+</div>
+<div class="title">Figure 4. Configuration de la base de donnée</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/config_gitea_part2.png" alt="configuration du compte administrateur">
+</div>
+<div class="title">Figure 5. Configuration du compte administrateur</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_comment_faire_pour_la_mettre_à_jour_sans_devoir_tout_reconfigurer_essayez_en_mettant_à_jour_vers_la_version_1_19">5.2.4. Comment faire pour la mettre à jour sans devoir tout reconfigurer ? Essayez en mettant à jour vers la version 1.19.</h4>
+<div class="paragraph">
+<p>Il faut télécharger le fichier <code>upgrade.sh</code> sur le dépot GitHub suivant <a href="https://github.com/go-gitea/gitea/blob/main/contrib/upgrade.sh">upgrade.sh</a>. Puis, ajouter les droits d&#8217;éxecution dessus grâce à <code>chmod +x upgrade.sh</code>. Enfin, il suffit d&#8217;éxecuter cette commande : <code>sudo ./upgrade.sh -v <em>numéro-de-la-version</em></code>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_utilisation_basique">5.3. Utilisation basique</h3>
+<div class="imageblock">
+<div class="content">
+<img src="img/creation_depot_gitea.png" alt="création dépot gitea">
+</div>
+<div class="title">Figure 6. Création dépot sur gitea</div>
+</div>
+<div class="ulist">
+<div class="title">Sources :</div>
+<ul>
+<li>
+<p>[<a href="#R5.1.1">25</a>] : <a href="https://docs.gitea.io/fr-fr/">docs.gitea.io ; A propos de Gitea</a> <a id="Q5.1.1"></a></p>
+</li>
+<li>
+<p>[<a href="#R5.2.1">26</a>] : <a href="https://docs.gitea.io/en-us/install-from-binary/#download">docs.gitea.io ; Installation from binary</a> <a id="Q5.2.1"></a></p>
+</li>
+<li>
+<p>[<a href="#R5.2.2">27</a>] : <a href="https://docs.gitea.io/en-us/linux-service/">docs.gitea.io ; Run Gitea as Linux service</a> <a id="Q5.2.2"></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2023-03-27 00:32:14 +0200
+</div>
+</div>
+</body>
+</html>
